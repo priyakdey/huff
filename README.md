@@ -30,3 +30,7 @@ to be used for production environment.
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE)
 file for details.
+
+## Acknowledgements
+
+Special thanks to [patorjk.com](https://www.patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) for the ASCII art generator.
