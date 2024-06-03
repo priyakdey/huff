@@ -1,0 +1,32 @@
+4 byte of length of tree | serialized huffman tree as array | data encoded code prefix table 
+
+serialized huffman tree:
+
+codepoint: 4 bytes (int32)
+freq     : 4 bytes (int32)
+left     : 4 bytes (int32) (index of left node in array, -1 for terminal nodes)
+right    : 4 bytes (int32) (index of right node in array, -1 for terminal nodes)
+
+16 bytes of data per node
+
+16 * number of nodes
+
+0x00, 0x03, 0x01, 0x02, 0x65, 0x01, 0xFF, 0xFF, 0x66, 0x02, 0xFF, 0xFF
+
+The tree is like:
+
+          NULL(3)
+           /\
+          /  \
+         /    \
+        /      \
+      'A'(1)  'B'(2)
+
+length of tree = 16 * 3 bytes = 48 bytes
+
+So serialized data would be like:
+
+'0x60', '0x00', '0x03', '0x01', '0x02', '0x65', '0x01', '0xFF', '0xFF', '0x66', '0x02', '0xFF', '0xFF' <encoded content>
+
+
+
